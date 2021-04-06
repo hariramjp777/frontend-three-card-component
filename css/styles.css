@@ -2,8 +2,8 @@
 :root {
   --ff-ld: "Lexend Deca", sans-serif;
   --ff-bs: "Big Shoulders Display", cursive;
-  --fs-md: 1.6rem;
-  --fs-lg: 2.4rem;
+  --fs-md: 1.1rem;
+  --fs-lg: calc(var(--fs-md) * 3);
   --fw-rg: 400;
   --fw-xb: 700;
 }
@@ -13,8 +13,13 @@
   --clr-orange: hsl(31, 77%, 52%);
   --clr-cyan: hsl(184, 100%, 22%);
   --clr-dark-cyan: hsl(179, 100%, 13%);
-  --clr-white: hsla(0, 0%, 100%, 0.75);
+  --clr-white: hsla(0, 0%, 100%, 0.7);
   --clr-gray: hsl(0, 0%, 95%);
+}
+
+/* VALUES */
+:root {
+  --bradius: 0.8rem;
 }
 
 /* RESETS */
@@ -45,9 +50,125 @@ img {
 
 button {
   cursor: pointer;
-  transition: 0.4s;
+  transition: color 0.4s, background-color 0.4s, transform 0.4s;
+  font: inherit;
+  border: none;
 }
 
 button:active {
   transform: scale(0.95);
+}
+
+/* BODY */
+
+body {
+  background-color: var(--clr-white);
+  font: var(--fw-rg) var(--fs-md) var(--ff-ld);
+  color: var(--clr-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TITLE - h2 */
+
+h2 {
+  font: var(--fw-xb) var(--fs-lg) var(--ff-bs);
+  color: var(--clr-gray);
+  margin: 2.4rem 0;
+}
+
+/* MAIN */
+
+main {
+  width: 69rem; /* height - 40 */
+  display: flex;
+}
+
+/* CARD */
+
+.card {
+  height: 100%;
+  width: 33.33%;
+  padding: 4rem;
+}
+
+.card:nth-child(1) {
+  background-color: var(--clr-orange);
+  border-radius: var(--bradius) 0 0 var(--bradius);
+}
+
+.card:nth-child(2) {
+  background-color: var(--clr-cyan);
+}
+
+.card:nth-child(3) {
+  background-color: var(--clr-dark-cyan);
+  border-radius: 0 var(--bradius) var(--bradius) 0;
+}
+
+.card img {
+  width: 5rem;
+}
+
+.card p {
+  line-height: 1.8;
+}
+
+.card button {
+  margin-top: 6.2rem;
+  padding: 1.2rem 2.8rem;
+  border-radius: 10rem;
+  color: var(--clr-orange);
+  border: 0.2rem solid var(--clr-white);
+}
+
+.card:nth-child(2) button {
+  color: var(--clr-cyan);
+}
+
+.card:nth-child(3) button {
+  color: var(--clr-dark-cyan);
+}
+
+.card button:hover {
+  background: transparent;
+  color: var(--clr-white);
+}
+
+@media (max-height: 428px) and (max-width: 735px) {
+  body {
+    height: 42.8rem;
+  }
+}
+
+@media (max-width: 735px) {
+  html,
+  body {
+    height: auto;
+    min-height: 100%;
+  }
+  body {
+    --fs-md: 1.6rem;
+    display: block;
+  }
+  main {
+    width: 90%;
+    margin: 6rem auto;
+    flex-direction: column;
+    height: 100%;
+  }
+  .card {
+    width: 100%;
+    height: auto;
+  }
+  .card:nth-child(1) {
+    border-radius: var(--bradius) var(--bradius) 0 0;
+  }
+  .card:nth-child(3) {
+    border-radius: 0 0 var(--bradius) var(--bradius);
+  }
+  .card button {
+    margin-top: 3rem;
+  }
 }
