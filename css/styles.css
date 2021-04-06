@@ -1,0 +1,51 @@
+/* FONTS */
+:root {
+  --ff-ld: "Lexend Deca", sans-serif;
+  --ff-bs: "Big Shoulders Display", cursive;
+  --fs-md: 1.6rem;
+  --fs-lg: 2.4rem;
+}
+
+/* COLORS */
+:root {
+  --clr-orange: hsl(31, 77%, 52%);
+  --clr-cyan: hsl(184, 100%, 22%);
+  --clr-dark-cyan: hsl(179, 100%, 13%);
+  --clr-white: hsla(0, 0%, 100%, 0.75);
+  --clr-gray: hsl(0, 0%, 95%);
+}
+
+/* RESETS */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  position: relative;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+img {
+  user-select: none;
+}
+
+button {
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+button:active {
+  transform: scale(0.95);
+}
