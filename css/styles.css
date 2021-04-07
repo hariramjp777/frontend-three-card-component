@@ -13,7 +13,8 @@
   --clr-orange: hsl(31, 77%, 52%);
   --clr-cyan: hsl(184, 100%, 22%);
   --clr-dark-cyan: hsl(179, 100%, 13%);
-  --clr-white: hsla(0, 0%, 100%, 0.7);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-light-white: hsla(0, 0%, 100%, 0.7);
   --clr-gray: hsl(0, 0%, 95%);
 }
 
@@ -53,6 +54,7 @@ button {
   transition: color 0.4s, background-color 0.4s, transform 0.4s;
   font: inherit;
   border: none;
+  position: relative;
 }
 
 button:active {
@@ -62,9 +64,9 @@ button:active {
 /* BODY */
 
 body {
-  background-color: var(--clr-white);
+  background-color: var(--clr-light-white);
   font: var(--fw-rg) var(--fs-md) var(--ff-ld);
-  color: var(--clr-white);
+  color: var(--clr-light-white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,7 +83,7 @@ h2 {
 /* MAIN */
 
 main {
-  width: 69rem; /* height - 40 */
+  width: 69rem;
   display: flex;
 }
 
@@ -133,10 +135,10 @@ main {
 
 .card button:hover {
   background: transparent;
-  color: var(--clr-white);
+  color: var(--clr-light-white);
 }
 
-@media (max-height: 428px) and (max-width: 735px) {
+@media (max-height: 428px) and (min-width: 735px) {
   body {
     height: 42.8rem;
   }
@@ -170,5 +172,11 @@ main {
   }
   .card button {
     margin-top: 3rem;
+  }
+}
+
+@media (max-width: 374px) {
+  html {
+    font-size: 2.5vw;
   }
 }
