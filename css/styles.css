@@ -55,7 +55,6 @@ button {
   transition: color 0.4s, background-color 0.4s, transform 0.4s;
   font: inherit;
   border: none;
-  position: relative;
 }
 
 button:active {
@@ -111,6 +110,8 @@ main {
   border-radius: 0 var(--bradius) var(--bradius) 0;
 }
 
+/* CARD'S CHILDREN */
+
 .card img {
   width: 5rem;
 }
@@ -140,6 +141,8 @@ main {
   color: var(--clr-light-white);
 }
 
+/* ATTRIBUTION */
+
 .attribution {
   position: absolute;
   bottom: 1.3rem;
@@ -164,11 +167,15 @@ main {
   padding-left: 1rem;
 }
 
+/* FIX HEIGHT */
+
 @media (max-height: 500px) and (min-width: 735px) {
   body {
     height: 50rem;
   }
 }
+
+/* RESPONSIVE - SMALL DEVICES */
 
 @media (max-width: 735px) {
   html,
