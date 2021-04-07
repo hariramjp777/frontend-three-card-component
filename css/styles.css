@@ -64,7 +64,7 @@ button:active {
 /* BODY */
 
 body {
-  background-color: var(--clr-light-white);
+  background-color: var(--clr-gray);
   font: var(--fw-rg) var(--fs-md) var(--ff-ld);
   color: var(--clr-light-white);
   display: flex;
