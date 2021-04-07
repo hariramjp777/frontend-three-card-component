@@ -169,7 +169,7 @@ main {
 
 /* FIX HEIGHT */
 
-@media (max-height: 500px) and (min-width: 735px) {
+@media (max-height: 31.25em) and (min-width: 45.9em) {
   body {
     height: 50rem;
   }
@@ -177,7 +177,7 @@ main {
 
 /* RESPONSIVE - SMALL DEVICES */
 
-@media (max-width: 735px) {
+@media (max-width: 45.9em) {
   html,
   body {
     height: auto;
@@ -214,7 +214,7 @@ main {
   }
 }
 
-@media (max-width: 374px) {
+@media (max-width: 23.37em) {
   html {
     font-size: 2.5vw;
   }
