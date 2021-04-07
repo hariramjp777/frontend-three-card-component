@@ -2,6 +2,7 @@
 :root {
   --ff-ld: "Lexend Deca", sans-serif;
   --ff-bs: "Big Shoulders Display", cursive;
+  --ff-sm: 1rem;
   --fs-md: 1.1rem;
   --fs-lg: calc(var(--fs-md) * 3);
   --fw-rg: 400;
@@ -70,6 +71,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 /* TITLE - h2 */
@@ -138,9 +140,33 @@ main {
   color: var(--clr-light-white);
 }
 
-@media (max-height: 428px) and (min-width: 735px) {
+.attribution {
+  position: absolute;
+  bottom: 1.3rem;
+  font-size: var(--ff-sm);
+}
+
+.attribution a {
+  color: var(--clr-cyan);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+.attribution a:nth-child(1) {
+  border-right: 0.1rem solid;
+  padding-right: 1rem;
+}
+
+.attribution a:nth-child(2) {
+  padding-left: 1rem;
+}
+
+@media (max-height: 500px) and (min-width: 735px) {
   body {
-    height: 42.8rem;
+    height: 50rem;
   }
 }
 
@@ -172,6 +198,12 @@ main {
   }
   .card button {
     margin-top: 3rem;
+  }
+  .attribution {
+    --ff-sm: 1.4rem;
+    position: static;
+    text-align: center;
+    margin-bottom: 3rem;
   }
 }
 
